@@ -63,5 +63,11 @@ UPDATE Address_Book
 SET AddressBookName='Colleague',Type='Profession'
 WHERE FirstName='Shreya' 
 
+SELECT *FROM Address_Book
+
+--UC10 Get Contacts By Type
+SELECT Count(*),Type,AddressBookName
+FROM Address_Book
+GROUP BY Type,AddressBookName
 
 
