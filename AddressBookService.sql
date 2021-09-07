@@ -46,5 +46,22 @@ INSERT INTO Address_Book(FirstName,LastName,Address,City,State,Zip,PhoneNumber,E
 values('Binod','Singh','Gokhle Marg','Lucknow','Uttar Pradesh',226004,9450146236,'binod420@gmail.com')
 SELECT *FROM Address_Book WHERE City='Lucknow' ORDER BY(FirstName)
 
+--UC9 AddressBookName and Type Added
+ALTER TABLE Address_Book
+ADD AddressBookName varchar(200),
+Type varchar(200);
+
+UPDATE Address_Book
+SET AddressBookName='FriendName',Type='Friends'
+WHERE FirstName='Binod' or FirstName='Karan'
+
+UPDATE Address_Book
+SET AddressBookName='Brothers',Type='Family'
+WHERE FirstName='Gopala' or FirstName='Ankit'
+
+UPDATE Address_Book
+SET AddressBookName='Colleague',Type='Profession'
+WHERE FirstName='Shreya' 
+
 
 
