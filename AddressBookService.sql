@@ -28,5 +28,10 @@ UPDATE Address_Book
 SET PhoneNumber=8960779857 WHERE FirstName='Ankit'
 Select * from Address_Book
 
+--UC5 Delete a Person Using Last Name
+DELETE FROM Address_Book WHERE LastName='Verma'
+Select * from Address_Book
+
+
 
 
