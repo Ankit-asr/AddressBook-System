@@ -79,4 +79,34 @@ SET AddressBookName='Brothers',Type='Family'
 WHERE FirstName='Gopala' or FirstName='Ankit'
 
 
+create table AddressBook(
+AddressBookName varchar(200),
+AddressBookType varchar(200)primary key
+)
 
+select *from AddressBook
+
+INSERT INTO AddressBook values('Brothers','Family'),('FriendName','Friends'),('Colleague','Profession')
+SELECT * FROM AddressBook
+
+Create TABLE Contacts(
+BookType varchar(200),
+FirstName varchar(100),
+LastName varchar(100),
+Address varchar(250),
+City varchar(100),
+State varchar(100),
+Zip BigInt,
+PhoneNumber BigInt,
+EmailAddress varchar(200),Foreign key (BookType) references AddressBook(AddressBookType))
+
+INSERT INTO Contacts(BookType,FirstName,LastName,Address,City,State,Zip,PhoneNumber,EmailAddress) 
+values
+('Friends','Ankit','Singh','Gokhle Marg','Lucknow','Uttar Pradesh',226001,8960779857,'asr@gmail.com'),
+('Family','Ansh','Singh','Park Road','Hardoi','Uttar Pradesh',226016,9696992265,'ansh@gmail.com'),
+('Friends','Krishna','Sharma','Avenue Road','Lucknow','Uttar Pradesh',226563,9696332265,'krish@gmail.com'),
+('Family','Anurag','Singh','Indiranagar','Noida','Uttar Pradesh',115627,8574693221,'anu@gmail.com'),
+('Profession','Karan','Singh','Park Street','Bengaluru','Karnataka',122298,9256378299,'karan@gmail.com');
+
+
+DROP TABLE Address_Book
