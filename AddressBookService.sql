@@ -23,3 +23,10 @@ values
 
 Select * from Address_Book
 
+--UC4 Edit Existing Contact Using Name
+UPDATE Address_Book
+SET PhoneNumber=8960779857 WHERE FirstName='Ankit'
+Select * from Address_Book
+
+
+
