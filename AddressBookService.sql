@@ -36,6 +36,12 @@ Select * from Address_Book
 --UC6 Get Contact information by city or state
 SELECT * FROM Address_Book WHERE City='Lucknow' or State='Uttar Pradesh'
 
+--UC7 Count of Address Book by State or City
+SELECT Count(*),State,City
+FROM Address_Book
+GROUP BY State,City
+
+
 
 
 
