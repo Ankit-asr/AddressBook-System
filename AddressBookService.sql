@@ -41,7 +41,10 @@ SELECT Count(*),State,City
 FROM Address_Book
 GROUP BY State,City
 
-
+--UC8 Sort Names Alphabetically
+INSERT INTO Address_Book(FirstName,LastName,Address,City,State,Zip,PhoneNumber,EmailAddress) 
+values('Binod','Singh','Gokhle Marg','Lucknow','Uttar Pradesh',226004,9450146236,'binod420@gmail.com')
+SELECT *FROM Address_Book WHERE City='Lucknow' ORDER BY(FirstName)
 
 
 
